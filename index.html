@@ -240,11 +240,7 @@
       .start-btn:hover {
         transform: scale(1.07);
       }
-      .b2.ghost {
-        background: rgba(255, 255, 255, 0.1);
-        box-shadow: none;
-        border: 1px solid rgba(255, 182, 213, 0.5);
-      }
+
       #card {
         position: fixed;
         inset: 0;
@@ -551,8 +547,8 @@
     <script>
       let CFG = {
         l1: "CHÚC MỪNG 20/10",
-        l2: "Vui Lòng Nhập Tên",
-        name: "Vui Lòng Nhập Tên",
+        l2: "Yến Nhi",
+        name: "Yến Nhi",
         intro: "",
         wishes: [
           ["🌸", "Luôn xinh đẹp", "Rạng rỡ từ nụ cười đến trái tim."],
@@ -600,7 +596,7 @@
 
       function startApp() {
         const inputVal = $("userNameInput").value.trim();
-        const targetName = inputVal || "Vui Lòng Nhập Tên";
+        const targetName = inputVal || "Yến Nhi";
 
         CFG.l2 = targetName;
         CFG.name = targetName;
@@ -830,9 +826,6 @@
 
       addEventListener("keydown", (e) => {
         if (e.code === "Space") {
-          // Cho phép gõ khoảng trắng bình thường trong ô nhập tên
-          if (document.activeElement === $("userNameInput")) return;
-
           e.preventDefault();
           if (!$("stage").classList.contains("active") && !decoding) return;
           if (!decoding) decode();
