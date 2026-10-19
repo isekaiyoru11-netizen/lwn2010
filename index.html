@@ -551,8 +551,8 @@
     <script>
       let CFG = {
         l1: "CHÚC MỪNG 20/10",
-        l2: "Thiên Ngân",
-        name: "Thiên Ngân",
+        l2: "Vui Lòng Nhập Tên",
+        name: "Vui Lòng Nhập Tên",
         intro: "",
         wishes: [
           ["🌸", "Luôn xinh đẹp", "Rạng rỡ từ nụ cười đến trái tim."],
@@ -600,7 +600,7 @@
 
       function startApp() {
         const inputVal = $("userNameInput").value.trim();
-        const targetName = inputVal || "Thiên Ngân";
+        const targetName = inputVal || "Vui Lòng Nhập Tên";
 
         CFG.l2 = targetName;
         CFG.name = targetName;
